@@ -43,6 +43,6 @@ spec:
         - name: ROLE
           value: scheduler
         - name: REPO_ORG
-          value: hydro-project
+          value: Debbieliang9
         - name: REPO_BRANCH
-          value: master
+          value: TopK
