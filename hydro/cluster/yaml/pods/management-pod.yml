@@ -33,8 +33,8 @@ spec:
     - name: HYDRO_CLUSTER_NAME
       value: CLUSTER_NAME
     - name: REPO_ORG
-      value: hydro-project
+      value: Debbieliang9 # hydro-project
     - name: REPO_BRANCH
-      value: master
+      value: TopK #master
   nodeSelector:
     role: general
