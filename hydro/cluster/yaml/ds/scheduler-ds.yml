@@ -43,6 +43,11 @@ spec:
         - name: ROLE
           value: scheduler
         - name: REPO_ORG
-          value: Debbieliang9
+          value: Eric-Le-Ge
         - name: REPO_BRANCH
           value: TopK
+        - name: ANNA_REPO_ORG
+          value: Eric-Le-Ge
+        - name: ANNA_REPO_BRANCH
+          value: TopK
+
