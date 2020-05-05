@@ -97,8 +97,8 @@ def create_cluster(mem_count, ebs_count, func_count, sched_count, route_count,
 
     print('Creating routing service...')
     service_spec = util.load_yaml('yaml/services/routing.yml', prefix)
-    # client.create_namespaced_service(namespace=util.NAMESPACE,
-    #                                  body=service_spec)
+    client.create_namespaced_service(namespace=util.NAMESPACE,
+                                      body=service_spec)
 
     print('Adding %d scheduler nodes...' % (sched_count))
     add_nodes(client, apps_client, cfile, ['scheduler'], [sched_count], True,
@@ -111,8 +111,8 @@ def create_cluster(mem_count, ebs_count, func_count, sched_count, route_count,
 
     print('Creating function service...')
     service_spec = util.load_yaml('yaml/services/function.yml', prefix)
-    # client.create_namespaced_service(namespace=util.NAMESPACE,
-    #                                  body=service_spec)
+    client.create_namespaced_service(namespace=util.NAMESPACE,
+                                      body=service_spec)
 
     print('Adding %d benchmark nodes...' % (bench_count))
     add_nodes(client, apps_client, cfile, ['benchmark'], [bench_count], True,
@@ -203,3 +203,11 @@ if __name__ == '__main__':
                    args.scheduler[0], args.routing[0], args.benchmark,
                    args.conf, args.sshkey, cluster_name, kops_bucket,
                    aws_key_id, aws_key)
+    #client, apps_client = util.init_k8s()
+    #routing_svc_addr = util.get_service_address(client, 'routing-service')
+    #function_svc_addr = util.get_service_address(client, 'function-service')
+    
+    #print('The routing service can be accessed here: \n\t%s' %
+    #      (routing_svc_addr))
+    #print('The function service can be accessed here: \n\t%s' %
+    #      (function_svc_addr))

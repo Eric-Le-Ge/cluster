@@ -40,6 +40,5 @@ spec:
       value: Eric-Le-Ge
     - name: ANNA_REPO_BRANCH
       value: TopK
-
   nodeSelector:
     role: general

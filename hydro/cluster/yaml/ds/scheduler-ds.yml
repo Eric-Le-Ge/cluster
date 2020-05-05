@@ -33,7 +33,7 @@ spec:
       hostIPC: true
       containers:
       - name: scheduler-container
-        image: hydroproject/cloudburst
+        image: hydroproject/cloudburst # debbieliang/cloudburst
         imagePullPolicy: Always
         env:
         - name: ROUTE_ADDR
@@ -50,4 +50,3 @@ spec:
           value: Eric-Le-Ge
         - name: ANNA_REPO_BRANCH
           value: TopK
-
